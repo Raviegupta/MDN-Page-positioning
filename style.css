@@ -1,15 +1,42 @@
 *{
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
+
+ul li{
+    list-style: none;
+}
+
+.header1 {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    width: 100%;
+}
+
+.header1_left {
+    display: flex;
+}
+.header1_left .logo {
+    display: flex;
+    align-items: center;
+}
+
+.header1_left_ul{
+    display: flex;
+    gap: 20px;
+    padding: 20px ;
+}
+
 .m{
     font-weight:bold;
     font-style: italic;
     font-size: 35px;
     color: blue;
+    margin-left: 15px;
 }
 .mdn{
-    margin-left: -10px;
     font-weight: bold;
     font-size: 25px;
 }
@@ -17,102 +44,156 @@
     color: grey;
     font-size: 20px;
 }
+.header1_right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header1_right button{
+    margin-right: 15px;
+    font-size: 0.8rem;
+    color: white;
+    background-color:black;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.header1_right i {
+    font-size: 14px;
+    color: black;
+}
 .theme{
     font-size: 20px;
 }
 
-.header1, .header2{
-    display: flex;
-    justify-content: space-between;
-    background-color: white;
-    align-items: center;
-    border: 1px solid black;
-    width: 100%;
-    padding: 10px 0px;   
-}
-.header1{
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-}
-.header2{
-    position: fixed;
-    top: 80px;
-    z-index: 1000;
-}
-
-
 .search_box{
-    width: 50px;
+    width: 75px;
     height: 30px;
-    /* border-top-left-radius:20px ;
-    border-bottom-left-radius:20px ; */
     border-radius: 20px;
-
+    /* cursor: pointer; */
+    padding-left: 10px;
 }
 .search_icon{
     display: flex;
     justify-content: center;
     align-items: center;
-   /* border: 1px solid black; */
-   /* height: 30px;  */
-}
-
-
-.header1_left, .header2_left{
-    margin-left: 20px;
-}
-.header1_right, .header2_right{
-    margin-right: 40px;
-}
-.header1_items, .header2_items{
-    margin: 10px;
 }
 .already{
     font-size: 18px;
 }
-.header1_right button{
-    font-size: 18px;
-    color: white;
-    background-color:black;
-    padding: 10px;
-}
 
 
-.main{
+/* css of header2 */
+.header2 {
     display: flex;
     justify-content: space-between;
-    
+    align-items: center;
+    border-bottom: 1px solid gray;
+    color: gray;
+    padding-right: 20px;
+    background-color: #9999990c;
 }
-.left{
-    border: 1px solid black;
-    width: 20%;
-    position: fixed;
-    left: 0;
-    top: 120px;
-    overflow-y: scroll;
-}
-.center{
-    border: 1px solid blue;
-    width: 60%;
-    position: absolute;
-    left: 20%;
-    top:120px; 
+
+.header2_left {
     display: flex;
-    flex-direction: column;
-    padding: 5px;
-   
-}    
-.right{
-    border: 1px solid tomato;
-    width:20%;
-    position: fixed;
-    right: 0;
-    top: 120px;
+    gap: 20px;
+    padding: 5px 20px;
 }
 
-ul li{
-    list-style: none;
+
+
+/* csss of main body section*/
+.main-section{
+    width: 100%;
+    display: flex;
+}
+
+#left-side-bar {
+    width: 20%;
+    /* border: 1px solid red; */
+    padding: 15px;
+}
+
+#main-content {
+    width: 60%;
+    /* border: 2px solid blue; */
+    padding: 30px;
+}
+
+#right-side-bar {
+    width: 20%;
+    /* border: 2px solid red; */
+    border-left: 1px solid gray;
+    padding: 15px;
+}
+
+
+.main-section h2 {
+    padding: 10px;
+    text-align: center;
+}
+.img {
+    text-align: center;
+}
+.img img {
+    width: 500px;
+}
+
+
+
+#left-side-bar ul li {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+#right-side-bar ul li {
+    font-size: 1.5rem;
+    padding: 15px;
+}
+
+#main-content p {
+    text-align: justify;
+}
+
+#main-content section {
+    border: 1px solid blue;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
+
+/* ------------- css positioning starts----------------- */
+/* positioning of wrapper-headers*/
+#wrapper-headers {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+
+/* positioning of left & right side bar*/
+#left-side-bar, #right-side-bar{
+    height: 86vh;
+    overflow-y: scroll;
+     
+    position: sticky;
+    top: 95px;
+}
+
+
+/* ---------------- css positioning ends ------------------- */
+
+
+
+
+/* css of footing */
+#footer {
+    margin-top: 15px;
+    padding: 20px;
+    /* border: 1px solid blue; */
+    font-size: 20px;
+    text-align: justify;
+    background-color: rgba(224, 255, 255, 0.692);
+}
